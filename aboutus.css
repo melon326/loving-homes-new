@@ -1,0 +1,470 @@
+/* Loving Homes — About Us page */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0a120d;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #ffffff;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: #1a3d28;
+  padding: 8px 12px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 8px;
+}
+
+.site-header {
+  background-color: #000000;
+  border-bottom: 1px solid rgba(120, 255, 170, 0.18);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 112px;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.nav a:hover,
+.nav a:focus {
+  text-decoration: none;
+  background-color: #1a4d2e;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.nav a[aria-current="page"] {
+  background-color: #0f2a1a;
+  box-shadow: inset 0 0 0 1px rgba(120, 255, 170, 0.25);
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #0f2a1a;
+  box-shadow: inset 0 0 0 1px rgba(120, 255, 170, 0.22);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.header-phone:hover,
+.header-phone:focus {
+  background: #1a4d2e;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero */
+.hero-about {
+  position: relative;
+  min-height: 320px;
+}
+
+.hero-about-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-about-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero-about-text {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 16px;
+  text-align: center;
+}
+
+.hero-about-title {
+  margin: 0 0 8px;
+  font-size: clamp(26px, 5vw, 44px);
+  text-transform: uppercase;
+}
+
+.hero-about-sub {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rip {
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(120, 255, 170, 0.22) 0px,
+    rgba(120, 255, 170, 0.22) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  opacity: 0.55;
+}
+
+/* Split sections */
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  gap: 24px;
+  align-items: center;
+}
+
+.split--reverse {
+  flex-direction: row-reverse;
+}
+
+.split-img {
+  flex: 1 1 280px;
+}
+
+.split-img--round img {
+  border-radius: 50%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.split-text {
+  flex: 1 1 280px;
+}
+
+.split-text h2 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.split-text p {
+  margin: 0;
+  color: #d0ddd4;
+  font-size: 20px;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  transition: transform 0.25s;
+}
+
+.banner:hover img {
+  transform: scale(1.02);
+}
+
+.banner-caption {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 0 1px 4px #000000;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Photo strip */
+.photo-strip {
+  position: relative;
+  margin: 0 auto 40px;
+  max-width: 1100px;
+  padding: 0 16px;
+}
+
+.photo-strip img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  transition: transform 0.25s;
+}
+
+.photo-strip:hover img {
+  transform: scale(1.02);
+}
+
+.photo-strip-text {
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 28px;
+  max-width: 280px;
+  text-shadow: 0 1px 4px #000000;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Why */
+.why {
+  background-color: #122a1c;
+  padding: 40px 16px;
+}
+
+.why-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.why-illustration {
+  flex: 1 1 260px;
+}
+
+.why-illustration img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.why-text {
+  flex: 1 1 300px;
+}
+
+.why-text h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.why-text ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #d0ddd4;
+}
+
+.why-text li {
+  margin-bottom: 8px;
+}
+
+/* Team */
+.team {
+  padding: 40px 16px 48px;
+  text-align: center;
+}
+
+.team-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.team-intro {
+  margin: 0 auto 24px;
+  max-width: 640px;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.team-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 12px 14px;
+  border-radius: 14px;
+  background: #0d1f14;
+  box-shadow: inset 0 0 0 1px rgba(120, 255, 170, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  width: 190px;
+}
+
+.team-member:hover,
+.team-member:focus {
+  background: #122a1c;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(120, 255, 170, 0.35);
+  margin: 0 auto 8px;
+  transition: transform 0.2s;
+}
+
+.team-member:hover img,
+.team-member:focus img {
+  transform: scale(1.05);
+}
+
+.team-name {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.team-role {
+  display: block;
+  margin-top: 8px;
+  color: #d0ddd4;
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.team-member:hover .team-role,
+.team-member:focus .team-role {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-footer {
+  background-color: #000000;
+  border-top: 1px solid rgba(120, 255, 170, 0.18);
+  padding: 20px 16px;
+  font-size: 11px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-email a {
+  text-decoration: none;
+}
+
+.footer-email a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    padding: 12px 0;
+    border-top: 1px solid rgba(120, 255, 170, 0.18);
+  }
+
+  .header-phone {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .banner-caption {
+    position: static;
+    margin-top: 8px;
+  }
+
+  .photo-strip-text {
+    position: static;
+    margin-top: 8px;
+    max-width: none;
+  }
+}
